@@ -2,7 +2,7 @@ function Survey() {
 
     return (
         <div>
-            <h1>Questinnaire 🧮</h1>
+            <h1>Questionnaire 🧮</h1>
         </div>
     )
 }

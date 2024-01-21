@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Survey from './pages/Survey'
+import Results from './pages/Results'
 import Header from './components/Header'
 import Error from './components/Error'
 
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/survey/:questionNumber' element={<Survey />}/>
+        <Route path='/results' element={<Results />}/>
         {/* To redirect to an error page, 
         if the specified url does not exist  */}
         <Route path='*' element={<Error />}/>

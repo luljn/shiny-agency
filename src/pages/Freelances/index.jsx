@@ -4,17 +4,17 @@ const freelanceProfiles = [
     {
         name: 'Jane Doe',
         jobTitle: 'DevOps',
-        picture: "C:\Users\User\Documents\X2026\X2 2022-2023\Stage de découverte\IPM (Internship Projects Manager)\static app\X\IPM\media\defaultUserPicture.png",
+        picture: "C:\\Users\\User\\Documents\\X2026\\X2 2022-2023\\Stage de découverte\\IPM (Internship Projects Manager)\\static app\\X\\IPM\\media\\defaultUserPicture.png",
     },
     {
         name: 'John Doe',
         jobTitle: 'Développeur frontend',
-        picture: "C:\Users\User\Documents\X2026\X2 2022-2023\Stage de découverte\IPM (Internship Projects Manager)\static app\X\IPM\media\defaultUserPicture.png",
+        picture: "C:\\Users\\User\\Documents\\X2026\\X2 2022-2023\\Stage de découverte\\IPM (Internship Projects Manager)\\static app\\X\\IPM\\media\\defaultUserPicture.png",
     },
     {
         name: 'Jeanne Biche',
         jobTitle: 'Développeur Fullstack',
-        picture: "C:\Users\User\Documents\X2026\X2 2022-2023\Stage de découverte\IPM (Internship Projects Manager)\static app\X\IPM\media\defaultUserPicture.png",
+        picture: "C:\\Users\\User\\Documents\\X2026\\X2 2022-2023\\Stage de découverte\\IPM (Internship Projects Manager)\\static app\\X\\IPM\\media\\defaultUserPicture.png",
     }
 ]
 

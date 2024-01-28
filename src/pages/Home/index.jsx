@@ -1,4 +1,4 @@
-// import { useState } from "react"
+import { useState } from "react"
 import styled from "styled-components"
 
 const HomeContainer = styled.div`
@@ -12,14 +12,17 @@ const Balloon = styled.div`
       width: 100px;
       border-radius: 50px;
       background-color: #e20202;
+      transform: scale(${({size}) => size});
 `
 
 function Home() {
 
+  const [size, setSize] = useState(1)
+
   return (
     <HomeContainer>
-      <h1>Page d'accueil 🏡</h1>
-      <Balloon />
+      <h1 onClick={() => setSize(size + 0.1)}>Page d'accueil 🏡</h1>
+      <Balloon size={size}/>
     </HomeContainer>
   )
 }

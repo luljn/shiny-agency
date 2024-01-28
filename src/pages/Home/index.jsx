@@ -11,7 +11,7 @@ const Balloon = styled.div`
       height: 100px;
       width: 100px;
       border-radius: 50px;
-      background-color: #20202;
+      background-color: #e20202;
 `
 
 function Home() {

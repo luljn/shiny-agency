@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-// import { StyledLink } from '../../utils/style/Atoms'
+import { StyledLink } from '../../utils/style/Atom'
 import DarkLogo from '../../assets/dark-logo.png'
 
 const HomeLogo = styled.img`
@@ -21,11 +21,11 @@ function Header() {
         <HomeLogo src={DarkLogo} />
       </Link>
       <div>
-        <Link to="/">Accueil</Link>
-        <Link to="/freelances">Profiles</Link>
-        <Link to="/survey/1" $isFullLink>
+        <StyledLink to="/">Accueil</StyledLink>
+        <StyledLink to="/freelances">Profiles</StyledLink>
+        <StyledLink to="/survey/1" $isFullLink>
           Faire le test
-        </Link>
+        </StyledLink>
       </div>
     </NavContainer>
   )

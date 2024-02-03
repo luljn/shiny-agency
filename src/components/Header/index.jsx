@@ -1,28 +1,34 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import colors from "../../utils/style/colors";
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+// import { StyledLink } from '../../utils/style/Atoms'
+import DarkLogo from '../../assets/dark-logo.png'
 
-const StyledLink = styled(Link)`
-            padding: 15 px;
-            color: #8186a0;
-            text-decoration: none;
-            font-size: 30px;
-            ${(props) => 
-                props.$isFullLink &&
-                `color: white; border-radius: 30px; background-color: ${colors.primary}`}
+const HomeLogo = styled.img`
+  height: 70px;
+`
+
+const NavContainer = styled.nav`
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 function Header() {
-
-    return (
-        <nav> 
-            <StyledLink to="/">Acceuil</StyledLink>
-            <StyledLink to="/survey/1" $isFullLink>
-                Faire le test
-            </StyledLink>
-            <StyledLink to="/freelances">Freelances</StyledLink>
-        </nav>
-    )
+  return (
+    <NavContainer>
+      <Link to="/">
+        <HomeLogo src={DarkLogo} />
+      </Link>
+      <div>
+        <Link to="/">Accueil</Link>
+        <Link to="/freelances">Profiles</Link>
+        <Link to="/survey/1" $isFullLink>
+          Faire le test
+        </Link>
+      </div>
+    </NavContainer>
+  )
 }
 
 export default Header

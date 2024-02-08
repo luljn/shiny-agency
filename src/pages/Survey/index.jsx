@@ -42,7 +42,6 @@ function Survey() {
   // Mais pour utiliser await dans une fonction, il faut que celle-ci soit async (pour asynchrone).
   // Comme la fonction passée à useEffect ne peut pas être asynchrone,
   // il faut utiliser une fonction qui est appelée dans useEffect et déclarée en dehors, comme ici 👇.
-  // Essayez de commenter le code créé dans le chapitre et de décommenter fetchData pour voir.
 
   // async function fetchData() {
   //   try {

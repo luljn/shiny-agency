@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import { Loader } from '../../utils/style/Atom'
+import urlConfig from '../../config'
 
 const SurveyContainer = styled.div`
   display: flex;

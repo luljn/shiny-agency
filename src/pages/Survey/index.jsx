@@ -57,7 +57,7 @@ function Survey() {
   useEffect(() => {
     // fetchData()
     setDataLoading(true)
-    fetch(`http://localhost:8000/survey`).then((response) =>
+    fetch(urlConfig.testUrl+`/survey`).then((response) =>
       response.json().then(({ surveyData }) => {
         setSurveyData(surveyData)
         setDataLoading(false)

@@ -7,15 +7,9 @@ import Results from './pages/Results'
 import Freelances from './pages/Freelances'
 import Header from './components/Header'
 import Error from './components/Error'
-import { createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from './utils/context'
-
-
-const GlobalStyle = createGlobalStyle`
-    div {
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
-`
+import GlobalStyle from './utils/style/GlobalStyle'
+import Footer from './components/Footer'
 
 
 
@@ -35,6 +29,7 @@ root.render(
         if the specified url does not exist  */}
         <Route path='*' element={<Error />}/>
       </Routes>
+      <Footer />
       </ThemeProvider>
     </Router>
   </React.StrictMode>

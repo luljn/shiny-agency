@@ -8,6 +8,7 @@ import Freelances from './pages/Freelances'
 import Header from './components/Header'
 import Error from './components/Error'
 import { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from './utils/context'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -22,6 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
+    <ThemeProvider>
       <GlobalStyle />
       <Header />
       <Routes>
@@ -33,6 +35,7 @@ root.render(
         if the specified url does not exist  */}
         <Route path='*' element={<Error />}/>
       </Routes>
+      </ThemeProvider>
     </Router>
   </React.StrictMode>
 )

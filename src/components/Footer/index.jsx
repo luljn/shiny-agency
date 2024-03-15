@@ -9,6 +9,9 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   padding-top: 60px;
+  padding-bottom: 10px;
+  margin-top: 120px;
+  background-color: #f5f5f5;
 `
 
 const NightModeButton = styled.button`

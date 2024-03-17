@@ -1,29 +1,40 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
-
-
-// To fetch the data from the API.
+// To fetch data from the API.
 export function useFetch(url) {
 
-    const [data, setData] = useState({})
-    const [isLoading, setLoading] = useState(true)
+  const [data, setData] = useState({})
+  const [isLoading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
-    useEffect(() => {
+  useEffect(() => {
 
-        if(!url) return 
+    if (!url) return
+    setLoading(true)
+    async function fetchData() {
 
-            async function fecthData() {
+      try {
 
-                const response = await fetch(url)
-                const data = await response.json()
+        const response = await fetch(url)
+        const data = await response.json()
+        setData(data)
+      } 
+      
+      catch (err) {
 
-                setData(data)
-                setLoading(false)
-            }
+        console.log(err)
+        setError(true)
+      } 
+      
+      finally {
 
-            setLoading(true)
-            fecthData()
-    }, [url])
+        setLoading(false)
+      }
+    }
 
-    return { isLoading, data }
+    fetchData()
+
+  }, [url])
+  
+  return { isLoading, data, error }
 }

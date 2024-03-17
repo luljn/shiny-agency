@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { ThemeContext } from '../context'
 
 // To fetch data from the API.
 export function useFetch(url) {
@@ -38,3 +39,10 @@ export function useFetch(url) {
   
   return { isLoading, data, error }
 }
+
+
+
+export function useTheme() {
+    const { theme, toggleTheme } = useContext(ThemeContext)
+    return { theme, toggleTheme }
+  }
